@@ -12,7 +12,6 @@ Bnotion is a **Notion-inspired note-taking app** built with **C#** and **Avaloni
 - Edit page titles and content with auto-save
 - Modern Dark Mode interface
 - Local note storage in JSON format
-- Support for bullet lists and checkboxes
 - Export to standalone `.exe` for Windows
 
 ---
