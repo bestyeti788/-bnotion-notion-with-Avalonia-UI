@@ -25,13 +25,16 @@ Bnotion is a **Notion-inspired note-taking app** built with **C#** and **Avaloni
 - Visual Studio 2022 or later (optional for source code)
 - Windows 10 or 11
 
+- 
+<img width="1026" height="607" alt="image" src="https://github.com/user-attachments/assets/e045aa10-5559-43c0-be86-2f37908322ba" />
+
+<img width="1361" height="991" alt="image" src="https://github.com/user-attachments/assets/bc76d5f0-c6bc-4a66-8472-0d68197f9353" />
+
+
 ### Clone and run
 
 ```bash
 git clone https://github.com/bestyeti788/AvaloniaApplication1.git
 cd AvaloniaApplication1
-dotnet run
+dotnet run 
 
-<img width="1026" height="607" alt="image" src="https://github.com/user-attachments/assets/e045aa10-5559-43c0-be86-2f37908322ba" />
-
-<img width="1361" height="991" alt="image" src="https://github.com/user-attachments/assets/bc76d5f0-c6bc-4a66-8472-0d68197f9353" />
