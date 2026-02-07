@@ -1,0 +1,151 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
+        x:Class="AvaloniaApplication1.Views.MainWindow"
+        Icon="C:\Users\Besty\source\repos\AvaloniaApplication1\AvaloniaApplication1\Assets\image\Document.ico"
+        Title="Bnotion"
+        WindowState="Normal"
+        Width="1024"
+        Height="600"
+        MinHeight="450"
+        MinWidth="750"
+        SystemDecorations="BorderOnly"
+        CanResize="True">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Window.Styles>
+    <Style Selector="TextBox.Flat">
+
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Foreground" Value="White" />
+
+        <Style Selector="^:focus /template/ Border#PART_BorderElement">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+
+        <Style Selector="^:pointerover /template/ Border#PART_BorderElement">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+    </Style>
+</Window.Styles>
+
+    <Grid ColumnDefinitions="250, *" Background="#161616">
+
+        <Grid Background="#161616" ColumnDefinitions="250, * " Grid.Column="0">
+
+            <Border Grid.Column="0" Padding="1.01" Background="#404040">
+              <ScrollViewer>
+		    	<Grid Background="#1E1E1E" RowDefinitions="*, auto" >
+                  <StackPanel VerticalAlignment="Top" >
+		    		<StackPanel HorizontalAlignment="Left" Margin="20,20,0,0">
+                        <Image Source="C:\Users\Besty\source\repos\AvaloniaApplication1\AvaloniaApplication1\Assets\image\Document.ico" Height="30"> </Image>
+                    </StackPanel>
+
+                    <StackPanel x:Name="PagesPanel"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Margin="0, 60, 0, 0"/>
+
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <TextBox
+                        x:Name="MonTitleBox" Height="15"
+                        FontSize="15"
+                        Watermark="New pages"
+    Background="Transparent"
+    Classes="Flat"
+    Foreground="Gray">
+							
+                        </TextBox>
+                        <Button Click="add_page" Content="+" Background="Transparent" Foreground="White" FontSize="36" >
+						
+                        </Button>
+
+
+                    </StackPanel>
+                 </StackPanel>
+
+
+
+                    <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10, 0, 0, 20">
+                        <Button Click="github" Background="Transparent">
+                            <Image Source="C:\Users\Besty\source\repos\AvaloniaApplication1\AvaloniaApplication1\Assets\image\github.png" Height="30"></Image>
+                        
+    
+                      </Button>
+                    </StackPanel>
+                </Grid>
+              </ScrollViewer>
+            </Border>
+
+    
+        </Grid>
+
+
+        <Grid Grid.Column="1">
+         <Grid Background="#161616" PointerPressed="HeaderPointerPressed">
+			<Button Click="DeleteCurrentNote" VerticalAlignment="Top" Margin="25, 10, 0, 0" Background="Transparent">
+					<Image Source="C:\Users\Besty\source\repos\AvaloniaApplication1\AvaloniaApplication1\Assets\image\bin.png" Height="25">
+						
+                    </Image>
+            </Button>
+
+            <Button Click="minimize" VerticalAlignment="Top" Margin="0, 1, 85, 0" Content="-" HorizontalAlignment="Right" FontSize="35" Background="Transparent" Foreground="White">
+					
+            </Button>
+
+            <Button Click="maximize" Content="▢" Foreground="White" VerticalAlignment="Top" Margin="0, 10, 45, 0"  HorizontalAlignment="Right" FontSize="25" Background="Transparent">
+            </Button>
+
+            <Button Click="quit" VerticalAlignment="Top" Margin="0, 12, 6, 0"  HorizontalAlignment="Right" FontSize="35" Background="Transparent">
+					<Image Source="C:\Users\Besty\source\repos\AvaloniaApplication1\AvaloniaApplication1\Assets\image\icons8-quit-96.png" Height="25">
+						
+                    </Image>
+            </Button>
+              
+
+            </Grid>    
+                <Grid>
+	                 <TextBox 
+    x:Name="TitleEditorBox"
+    Background="Transparent"
+    Classes="Flat"
+    Foreground="Gray" Watermark="New page" FontSize="60" Height="100" Width="450" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="125, 100" >
+                     </TextBox>
+
+                     <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130, 193" >
+		 
+                           <TextBox 
+    x:Name="EditorTextBox"
+    Background="Transparent"
+    Classes="Flat"
+    Foreground="White"
+    Watermark="content"
+    TextWrapping="Wrap"
+    />
+
+                
+
+                    </ScrollViewer>
+ 
+              </Grid>
+
+
+         </Grid>
+
+    </Grid>
+
+</Window>
