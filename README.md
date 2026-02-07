@@ -1,5 +1,5 @@
 # Bnotion - Notion Clone in Avalonia
-<img width="2000" height="2000" alt="Document" src="https://github.com/user-attachments/assets/e5c30ed6-ddc0-41b3-b10f-f403a3e7fe91" />
+<img width="200" height="200" alt="Document" src="https://github.com/user-attachments/assets/e5c30ed6-ddc0-41b3-b10f-f403a3e7fe91" />
 
 Bnotion is a **Notion-inspired note-taking app** built with **C#** and **Avalonia UI**. It runs on Windows and allows you to easily create, edit, and organize notes as pages.
 
