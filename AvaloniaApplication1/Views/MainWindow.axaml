@@ -126,20 +126,17 @@
     Foreground="Gray" Watermark="New page" FontSize="60" Height="100" Width="450" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="125, 100" >
                      </TextBox>
 
-                     <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130, 193" >
-		 
-                           <TextBox 
+                           <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130, 193"
     x:Name="EditorTextBox"
     Background="Transparent"
     Classes="Flat"
     Foreground="White"
     Watermark="content"
     TextWrapping="Wrap"
+    AcceptsReturn="True"
+    
     />
 
-                
-
-                    </ScrollViewer>
  
               </Grid>
 
